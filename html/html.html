@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>HTML</h1>
+    <a href="index.html">Table of Contents</a>
+    <h3>Documentation and Resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></li>
+        <li><a href="https://devdocs.io/" target="_blank">devdocs</a></li>
+    </ul>
+    <h2>Headings 1 - 6</h2>
+    <ol>
+        <li><h1>heading 1 with h1 tag</h1></li>
+        <li><h2>Heading 2 with h2 tag</h2></li>
+        <li><h3>heading 3 with h3 tag</h3></li>
+        <li><h4>heading 4 with h4 tag</h4></li>
+        <li><h5>heading 5 with h5 tag</h5></li>
+        <li><h6>heading 6 with h6 tag</h6></li>
+    </ol>
+    <h2>Other html tags</h2>
+    <h3>&lt;em&gt; vs &lt;i&gt;</h3>
+    <p>while they appear the same, <em>em</em> implies a higher level of importance. Both appear italic</p>
+    <h3>&lt;strong&gt; vs &lt;b&gt;</h3>
+    <p>While they both appear bold, the <strong>strong</strong> tag implies a higher level of importance.</p>
+    <p>hr is the horizontal rule html element. This element is self closing</p>
+    <hr>
+    <p>br is a line break html element. this element is self closing</p>
+    <p><strong>the line break is below</strong></p>
+    <br>
+    <p><strong>the line break is above</strong></p>
+    <p>Each html element has attributes that can be modified. For example the hr element can have a size attribute referring the pixel size of the horizontal rule. and a noshade attribute. See below different sized lines.</p>
+    <p>regular hr below</p>
+    <hr>
+    <p>hr noshade</p>
+    <hr noshade>
+    <p>hr size 5 and noshade</p>
+    <hr size="5" noshade>
+    <p>hr size 10 and noshade</p>
+    <hr size="10" noshade>
+    <p>hr size 10</p>
+    <hr size="10">
+    <h2>HTML Boilerplate</h2>
+    <p>The first tag in every html document is an HTML doctype. This tells you which version of html the browser should interpret the document as.</p>
+    <p>the tag for HTML5 is &lt;!DOCTYPE html&gt;</p>
+    <p>this is a self closing tag</p>
+    <p>The next tag that encompases the entire html document is: &lt;html lang="en-US"&gt;</p>
+    <p>lang is the attribute and sets the browser to interpret the text as english with a US dialect. Possibly this is for the visually impaired or any text to speech feature</p>
+    <p>Within the html tag there is a &lt;head&gt; and a &lt;body&gt; tag, these are sibling tags at the same level but within the &lt;html&gt; tags</p>
+    <h3>example boilerplate</h3>
+    <img src="boilerplate.png" alt="boilerplate html image">
+    <h2>Lists</h2>
+    <p>There are 2 types of lists, ordered lists and unordered lists.</p>
+    <h3>Sample unordered list</h3>
+    <ul>
+        <li>first list item</li>
+        <li>second list item</li>
+        <li>third list item
+            <ul>
+                <li>subitem</li>
+                <li>subitem2</li>
+            </ul>
+        </li>
+        <li>fourth list item</li>
+    </ul>
+    <h3>Sample ordered list</h3>
+    <ol>
+        <li>first list item</li>
+        <li>second list item
+            <ol type="a">
+                <li>subitem</li>
+                <li>subitem</li>
+            </ol>
+        </li>
+        <li>third list item</li>
+    </ol>
+    <p><strong>NOTE:</strong> The list items that have sublists should be formatted with the sublist ul or ol tag within the opening and closing li tags</p>
+    <h2>HTML image elements</h2>
+    <p>&lt;img src="path_to_file or url" alt="alternate text"&gt;</p>
+    <h2>HTML links and anchor tags</h2>
+    <p>&lt;a href="relative_path_to_doc or url"&gt;link text&lt;/a&gt;</p>
+    <h2>Tables in HTML</h2>
+    <p>sample default table</p>
+    <table>
+        <tr>
+            <td>row 1 column 1</td>
+            <td>row 1 column 2</td>
+        </tr>
+        <tr>
+            <td>row 2 column 1</td>
+            <td>row 2 column 2</td>
+        </tr>
+    </table>
+    <p>table with header and a border of 1 and cellspacing of 20</p>
+    <table border="1" cellspacing="20">
+        <thead>
+            <tr>
+                <th>Header for column 1</th>
+                <th>header for column 2</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>row 1 col 1</td>
+            <td>row 1 col 2</td>
+        </tr>
+        <tr>
+            <td>row 2 col 1</td>
+            <td>row 2 col 2</td>
+        </tr>
+    </table>
+    <h3>Forms</h3>
+    <p>form tags have the following useful attributes: action, method</p>
+    <p>label tags are associated with inputs. Input tags are self closing tags that have multiple types such as text, date, colorpicker and range</p>
+    <h4>Example</h4>
+    <form action="mailto:david.veytsman@gmail.com" method="post" enctype="text/plain">
+        <label for="FirstName">First Name</label>
+        <input type="text" name="FirstName"><br>
+        <label for="LastName">Last name</label>
+        <input type="text" name="LastName"><br>
+        <label for="Date"></label>
+        <input type="date" name="Date"><br>
+        <label for="favcolor">Color</label>
+        <input type="color" name="favcolor"><br>
+        <input type="submit">
+    </form>
+    <p><strong>NOTE: </strong>The action for the form element currently is set to "mailto:myemailaddress" and enctype="text/plain" the action opens users default email application and the enctype enables the message to be sent in plaintext.</p>
+</body>
+</html>
